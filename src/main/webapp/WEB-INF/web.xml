@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+    version="3.1">
+    <display-name>RMS Servlet Web</display-name>
+    <welcome-file-list>
+        <welcome-file>home</welcome-file>
+    </welcome-file-list>
+    <context-param>
+        <param-name>copyright</param-name>
+        <param-value>2018 Khotim MITRAIS</param-value>
+    </context-param>
+    <servlet>
+        <description>List all users</description>
+        <display-name>User List</display-name>
+        <servlet-name>UserList</servlet-name>
+        <servlet-class>com.mitrais.khotim.controllers.users.IndexAction</servlet-class>
+    </servlet>
+    <servlet>
+        <description>Create new user</description>
+        <display-name>Create User</display-name>
+        <servlet-name>UserCreate</servlet-name>
+        <servlet-class>com.mitrais.khotim.controllers.users.CreateAction</servlet-class>
+    </servlet>
+    <servlet>
+        <description>Update an existing user</description>
+        <display-name>Update User</display-name>
+        <servlet-name>UserUpdate</servlet-name>
+        <servlet-class>com.mitrais.khotim.controllers.users.UpdateAction</servlet-class>
+    </servlet>
+    <servlet>
+        <description>Delete an existing user</description>
+        <display-name>Delete User</display-name>
+        <servlet-name>UserDelete</servlet-name>
+        <servlet-class>com.mitrais.khotim.controllers.users.DeleteAction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserList</servlet-name>
+        <url-pattern>/users</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserCreate</servlet-name>
+        <url-pattern>/users/create</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserUpdate</servlet-name>
+        <url-pattern>/users/update</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserDelete</servlet-name>
+        <url-pattern>/users/delete</url-pattern>
+    </servlet-mapping>
+    <filter-mapping>
+        <filter-name>jdbcFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>cookieFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <trim-directive-whitespaces>true</trim-directive-whitespaces>
+        </jsp-property-group>
+    </jsp-config>
+</web-app>

@@ -1,0 +1,10 @@
+# MySQL JDBC driver
+jdbc.driver=com.mysql.cj.jdbc.Driver
+# hostname, port, database, and other connection details
+jdbc.url=jdbc:mysql://localhost:3306/sampledb?autoReconnect=true&useSSL=false
+# database user
+jdbc.user=sampleuser
+# database password
+jdbc.password=samplepaswd
+# name of migration table which will be created automatically
+jdbc.migrationTable=migrations
