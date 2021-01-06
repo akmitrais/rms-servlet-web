@@ -10,7 +10,7 @@
     <properties>
         <jdk.version>1.8</jdk.version>
         <jstl.version>1.2</jstl.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <maven.compiler.version>3.7.0</maven.compiler.version>
         <maven.eclipse.version>2.10</maven.eclipse.version>
         <mysql.connector.version>8.0.11</mysql.connector.version>
